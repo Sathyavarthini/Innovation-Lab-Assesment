@@ -1,0 +1,32 @@
+
+let student = {
+  name: 'John Doe',
+  age: 20,
+  displayInfo: function() {
+    console.log(`Name: ${this.name}, Age: ${this.age}`);
+  }
+};
+
+student.displayInfo(); // Output: "Name: John Doe, Age: 20"
+
+// Add functions inside objects as methods and invoke them
+student.greet = function() {
+  console.log(`Hello, my name is ${this.name}!`);
+};
+
+student.greet(); // Output: "Hello, my name is John Doe!"
+
+// Explore accessing and modifying object properties
+console.log(student.name); // Output: "John Doe"
+student.name = 'Jane Doe';
+console.log(student.name); // Output: "Jane Doe"
+### Task 3: Object Destructuring and Spread
+// Object destructuring
+let { name, age } = student;
+console.log(name); // Output: "Jane Doe"
+console.log(age); // Output: 20
+
+// Spread operator for objects
+let updatedStudent = { ...student, age: 21 };
+console.log(updatedStudent); // Output: { name: "Jane Doe", age: 21, displayInfo: [Function], greet: [Function] }
+This code covers the tasks outlined in the image, demonstrating advanced array methods, working with objects and methods, and object destructuring and spread.
